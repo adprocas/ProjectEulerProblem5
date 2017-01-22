@@ -6,11 +6,11 @@ public class ProjectEulerProblem5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        long startingNumber = 20L;
         long limit = 20L;
+        long startingNumber = limit * 19L;
         long factorialNumber = doFactorial(limit);
 
-        for (long x = startingNumber; x <= factorialNumber; x+=startingNumber) {
+        for (long x = startingNumber; x <= factorialNumber; x += 20L) {
             if (checkMultiple(x, limit)) {
                 System.out.println("The smallest positive number that is evenly divisible by all numbers from 1 to " + limit + " is " + x);
 
